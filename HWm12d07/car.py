@@ -33,7 +33,7 @@ n = int(input("Input n: "))
 car = Car(x, y, n)
 
 while True:
-    com = input().split()
+    com = input("\033[92m[car]> ").split()
 
     match com[0]:
         case "m":
@@ -50,3 +50,6 @@ while True:
             print(car)
         case "q":
             break
+        case _:
+            print("\033[91mUnknown command")
+
